@@ -92,19 +92,33 @@ function getNewDeck() {
 function computeScore(cards) {
   // This function receives an array of cards and returns the total score.
   // ...
-  var score = 0;
-  cards.forEach(card => {
-    console.log('carvalue', card.value)
-    var cardScore;
-    if(card.value === 'ACE') {cardScore = 1}
-    else if(card.value === 'KING') {cardScore = 10}
-    else if(card.value === 'QUEEN') {cardScore = 10}
-    else if(card.value === 'JACK') {cardScore = 10}
-    else {cardScore = card.value}
-    console.log('>>>>',cardScore)
-    score = +score +cardScore
-  })
-  return score
+  // var score = 0;
+  // cards.forEach(card => {
+  //   console.log('cardvalue', card.value)
+  //   var cardScore = 0;
+  //   if(card.value === 'ACE') {cardScore = 1}
+  //   else if(card.value === 'KING') {cardScore = 10}
+  //   else if(card.value === 'QUEEN') {cardScore = 10}
+  //   else if(card.value === 'JACK') {cardScore = 10}
+  //   else {cardScore = card.value}
+  //   console.log('>>>>',cardScore)
+  //   score = score + cardScore
+  // })
+  // return score
+
+  // var arrayOne = [];
+  // arrayOne.push(cards.forEach(function(a, index){
+  //   if (a.value === "ACE") {return 1;}
+  //   else if(a.value === "KING") {return 10;}
+  //   else if(a.value === "QUEEN") {return 10;}
+  //   else if(a.value === "JACK") {return 10;}
+  //   else {return a.value;}
+  // }))
+  // console.log(arrayOne);
+  // return arrayOne.reduce(function(s, e){
+  //   s + e;
+  // })
+
   // return cards.reduce((s,e) => {
   //   var a = typeof e.value
   //   if(a === 'number') return s + e.value
@@ -114,7 +128,7 @@ function computeScore(cards) {
   //   else if(e.value === 'JACK') return s + 11
   // });                                  
   // <<<<<<<<<<<<<<<<<<<<< must change face card values
-  
+  return cards.reduce((s,e) => s + e.value);
 }
 
 
