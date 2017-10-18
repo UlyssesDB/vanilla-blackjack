@@ -128,6 +128,7 @@ function computeScore(cards) {
   //   else if(e.value === 'JACK') return s + 11
   // });                                  
   // <<<<<<<<<<<<<<<<<<<<< must change face card values
+  
   return cards.reduce((s,e) => s + e.value);
 }
 
